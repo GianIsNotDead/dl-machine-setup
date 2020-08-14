@@ -23,3 +23,4 @@ I use Ubuntu 18.04.1 with x86_64 architecture.
 In terminal type:
 `nvidia-smi`
 It should display driver and cuda version.
+![nvidia-smi example](./github_resources/nvidia_gpu.png){:height="50%" width="auto"}
