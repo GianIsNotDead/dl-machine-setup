@@ -55,4 +55,12 @@ The command to connect on the client machine looks something like:
 ```ssh name_of_my_machine@10.0.189.229```  
 
 ## Miscellaneous:
-
+I want to edit and run Jupyter Notebook on the server from my client.  
+Step 1 of 2:  
+Start Jupyter Notebook in `--no-browser` mode. You can also run it in the background by adding `&` at the end, so you can do other operations.  
+Step 2 of 2:  
+We have to bind the port between the host and the client machine by giving `-L` as option. It just means whatever is happening on the specified port on the host machine will also happen on the same port on the client machine.  
+My notebook runs on port 8888, so on a new terminal:  
+```
+ssh -L 8888:localhost:8888 name_of_my_machine@10.0.189.229
+```
