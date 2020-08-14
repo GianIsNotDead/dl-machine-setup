@@ -30,18 +30,26 @@ It should display driver and cuda version.
 
 ## Configure for Remote Operation:
 Install Open SSH Server:  
-```sudo apt install openssh-server```  
+```
+sudo apt install openssh-server
+```  
 Once installed, a daemon is created to listen to connection requests.  
 To make it's running, type:  
-```sudo systemctl status ssh```  
+```
+sudo systemctl status ssh
+```  
 
 ## Firewall Setup:
 We have to allow network traffic on port 22.
 Depending on the operating system. Ubuntu has a user friendly interface called UFW (Uncomplicated Firewall) to configure network setting.  
 It's disabled by default, but if it isn't, type:  
-```sudo ufw allow ssh```  
+```
+sudo ufw allow ssh
+```  
 To check the status of the firework:  
-```sudo ufw status verbose```  
+```
+sudo ufw status verbose
+```  
 
 NOTE: This allows access to all the machines connected via the same network. 
 If accessing from a different network, the router which the ssh sever connected to might need to be configured to forward the packet.
@@ -49,15 +57,22 @@ If accessing from a different network, the router which the ssh sever connected 
 ## Connecting to the Server:
 Depending on the client machine, a ssh client might be necessary.
 Get the ip address of ssh server machine:  
-```ip a | grep inet```  
+```
+ip a | grep inet
+```  
 Pick the one that's on the wireless network. It has something like ```wlo1``` in the network description.  
 The command to connect on the client machine looks something like:  
-```ssh name_of_my_machine@10.0.189.229```  
+```
+ssh name_of_my_machine@10.0.189.229
+```  
 
 ## Miscellaneous:
 I want to edit and run Jupyter Notebook on the server from my client.  
 Step 1 of 2:  
-Start Jupyter Notebook in `--no-browser` mode. You can also run it in the background by adding `&` at the end, so you can do other operations.  
+Start Jupyter Notebook in `--no-browser` mode. You can also run it in the background by adding `&` at the end, so you can run other operations. It's something like:
+```
+jupyter notebook --no-browser &
+```
 Step 2 of 2:  
 We have to bind the port between the host and the client machine by giving `-L` as option. It just means whatever is happening on the specified port on the host machine will also happen on the same port on the client machine.  
 My notebook runs on port 8888, so on a new terminal:  
