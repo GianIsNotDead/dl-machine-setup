@@ -8,20 +8,20 @@
 - GPU: [Nvidia GeForce RTX 2080](https://www.bestbuy.com/site/nvidia-geforce-rtx-2080-super-8gb-gddr6-pci-express-3-0-graphics-card-black-silver/6361326.p?skuId=6361326) - $699.99
 - Power Supply: [Corsair - CX Series Modular CX750M](https://www.bestbuy.com/site/corsair-cx-series-modular-cx750m-750w-80-plus-bronze-atx-power-supply-black/8324202.p?skuId=8324202) - $124.99
 
-Total Cost: Too Much!
-I accidentally picked the most expensive motherboard on display, becuase the Best Buy employee didn't put it on the right shelf. I assume any motherboard with PCIe interface would work.
-I also use my machine for data storage, so I chose SSD with with a bit more disk space.
-As far as I know, RTX 2080 is the cheapest GPU from Nvidia that's compatible with Cuda, and has decent performance.
+Total Cost: Too Much!  
+I accidentally picked the most expensive motherboard on display, becuase the Best Buy employee didn't put it on the right shelf. I assume any motherboard with PCIe interface would work.  
+I also use my machine for data storage, so I chose SSD with with a bit more disk space.  
+As far as I know, RTX 2080 is the cheapest GPU from Nvidia that's compatible with Cuda, and has decent performance.  
 
 ## Operating System:
-I use Ubuntu 18.04.1 with x86_64 architecture.
+I use Ubuntu 18.04.1 with x86_64 architecture.  
 
 ## GPU Setup:
 1. Install driver like [this one][https://www.nvidia.com/download/driverResults.aspx/150803/en-us] or newer version. 
 2. Install Cuda based on machine's operating system and architecture.
 
 In terminal type:  
-`nvidia-smi`  
+```nvidia-smi```  
 It should display driver and cuda version.  
 
 ![nvidia-smi example](./github_resources/nvidia-smi-example.png)
