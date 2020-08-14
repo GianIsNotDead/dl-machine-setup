@@ -20,7 +20,8 @@ I use Ubuntu 18.04.1 with x86_64 architecture.
 1. Install driver like [this one][https://www.nvidia.com/download/driverResults.aspx/150803/en-us] or newer version. 
 2. Install Cuda based on machine's operating system and architecture.
 
-In terminal type:
-`nvidia-smi`
-It should display driver and cuda version.
+In terminal type:  
+`nvidia-smi`  
+It should display driver and cuda version.  
+
 ![nvidia-smi example](./github_resources/nvidia-smi-example.png)
