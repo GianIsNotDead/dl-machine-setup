@@ -21,7 +21,9 @@ I use Ubuntu 18.04.1 with x86_64 architecture.
 2. Install Cuda based on machine's operating system and architecture.
 
 In terminal type:  
-```nvidia-smi```  
+```
+nvidia-smi
+```  
 It should display driver and cuda version.  
 
 ![nvidia-smi example](./github_resources/nvidia-smi-example.png)
